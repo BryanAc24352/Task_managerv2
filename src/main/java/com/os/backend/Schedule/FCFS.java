@@ -20,19 +20,19 @@ public class FCFS extends SchedulingAlgo {
         Process p3 = new Process(3, 2, 2);
         Process p4 = new Process(4, 3, 5);
 
-        // Add the processes to a list
+       
         List<Process> processesList = new ArrayList<>(List.of(p1, p2, p3, p4));
 
-        // Create an instance of your scheduling algorithm
+        
         FCFS fcfs = new FCFS();
 
-        // Set the list of processes for the algorithm to execute
+        
         fcfs.addNewProcesses(processesList);
 
-        // Execute the algorithm
+        
         ProcessTable processTable = fcfs.execute();
 
-        // Output the execution events
+        
         for (ProcessExecutionEvent event : processTable.getExecutionEvents()) {
             System.out.println(event);
         }
@@ -46,45 +46,41 @@ public class FCFS extends SchedulingAlgo {
         ProcessTable processTable = new ProcessTable();
         int currentTime = 0;
 
-        while (!this.clonedProcesses.isEmpty()) { // Continue until all processes are executed
-            // Get the processes that have arrived by the current time
+        while (!this.clonedProcesses.isEmpty()) { 
             List<Process> arrivedProcesses = getArrivedProcesses(currentTime);
 
             if (arrivedProcesses.isEmpty()) {
-                // If no processes have arrived, increment current time
+                
                 currentTime++;
                 continue;
             }
 
-            // Get the process that arrived first (FCFS)
+            
             Process firstProcess = arrivedProcesses.get(0);
 
-            // Add event for process arrival
+            
             processTable.addExecutionEvent(firstProcess, currentTime, firstProcess.getProcessNumber(), ProcessState.ARRIVED);
 
-            // Add event for process start
+           
             processTable.addExecutionEvent(firstProcess, currentTime, firstProcess.getProcessNumber(), ProcessState.STARTED);
 
-            // Decrement cloned Process remaining time
+            
             firstProcess.decrementRemainingTime();
-            // Simulate process execution
+            
             int endTime = currentTime + firstProcess.getRemainingTime();
             while(firstProcess.getRemainingTime() != 0) {
                 processTable.addExecutionEvent(firstProcess, ++currentTime, firstProcess.getProcessNumber(), ProcessState.RUNNING);
                 List<Process> hackProcess = getCurrentProcesses(currentTime);
                 firstProcess.decrementRemainingTime();
-//                if (!hackProcess.isEmpty()) {
-//                    processTable.addExecutionEvent(hackProcess.get(i), i, hackProcess.get(i).getProcessNumber(), ProcessState.ARRIVED);
-//                }
+
             }
 
-            // Add event for process completion
             processTable.addExecutionEvent(firstProcess, currentTime, firstProcess.getProcessNumber(), ProcessState.COMPLETED);
 
-//          // Update current time
+
             currentTime++;
 
-            // Remove the executed process from the list
+
             clonedProcesses.remove(firstProcess);
         }
 
@@ -117,7 +113,7 @@ public class FCFS extends SchedulingAlgo {
         cloneProcessList();
     }
 
-    // Helper methods
+
     private void cloneProcessList() {
         this.clonedProcesses = processesList.stream()
                 .map(Process::clone)

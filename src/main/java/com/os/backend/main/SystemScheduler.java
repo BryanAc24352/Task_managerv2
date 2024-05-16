@@ -10,7 +10,7 @@ import java.util.List;
 
 public class SystemScheduler{
 
-    // Test block
+    
     public static void main(String[] args) {
         Backend backend = new Backend();
         backend.setAlgo(new FCFS());
@@ -43,10 +43,9 @@ public class SystemScheduler{
     }
 
     public void updateTimeForProcess(Process process, int time){
-        // Assuming no finished process will enter the function
-        // process => WAITING
+      
         if(process.getArrivalTime() < time && process.getRemainingTime() != 0){
-            // increment waiting
+          
             process.setWaitingTime(process.getWaitingTime() + 1);
             process.setTurnaroundTime(process.getWaitingTime() + (process.getBurstTime() - process.getRemainingTime()));
         }
@@ -55,15 +54,12 @@ public class SystemScheduler{
     }
 
     public Process getCurrentProcess(ProcessTable pTable,int time){
-        //TODO
-        // get processExecutionEvent at time t
+        
         List<ProcessExecutionEvent> pExecEventList = pTable.getProcessesList(time);
-        //  search for running process at current time
+        
         for(ProcessExecutionEvent e: pExecEventList){
             if( e.getState() == ProcessState.RUNNING || e.getState() == ProcessState.STARTED) {
-                // 1. update remaining time for current process
-                // assuming remaining time is initially equal to burst time
-                // 2. update waiting time for other processes
+               
                 for(Process p : backend.getProcessList()){
                     if (p.getProcessNumber() == e.getProcessNumber()) {
                         p.decrementRemainingTime();
@@ -72,7 +68,7 @@ public class SystemScheduler{
                     }
                     updateTimeForProcess(p, time);
                 }
-                // 3. return current running process
+                
                 return backend.getProcessList().get(e.getProcessNumber()-1);
             }
         }

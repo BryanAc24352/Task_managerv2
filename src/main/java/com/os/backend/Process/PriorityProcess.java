@@ -46,7 +46,7 @@ public class PriorityProcess extends Process implements Cloneable, Comparable<Pr
     public int compareTo(PriorityProcess o) {
         int priorityComparison = Integer.compare(this.priority, o.priority);
         if (priorityComparison != 0) {
-            return priorityComparison; // Higher priority value means lower priority
+            return priorityComparison; 
         }
 
         int arrivalTimeComparison = Integer.compare(this.getArrivalTime(), o.getArrivalTime());
@@ -54,7 +54,7 @@ public class PriorityProcess extends Process implements Cloneable, Comparable<Pr
             return arrivalTimeComparison;
         }
 
-        // If priority and arrival time are equal, compare process numbers
+        
         return Integer.compare(this.getProcessNumber(), o.getProcessNumber());
     }
 }

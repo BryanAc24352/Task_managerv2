@@ -36,7 +36,7 @@ public class Process implements Cloneable{
         this(0, 0, 1);
     }
 
-    // Getters and Setters
+    
 
     public int getProcessNumber() {
         return processNumber;
@@ -129,6 +129,19 @@ public class Process implements Cloneable{
         Process process = (Process) o;
         return processNumber == process.processNumber && arrivalTime == process.arrivalTime && burstTime == process.burstTime;
     }
+
+    public void setState(ProcessState processState) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void decrementRemainingTime(int guaranteedTime) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    /*public void setState(ProcessState processState) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }*/
+
 
 
 

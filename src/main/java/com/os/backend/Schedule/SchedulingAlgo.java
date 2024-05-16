@@ -23,7 +23,7 @@ public abstract class SchedulingAlgo {
         return processesList;
     }
 
-    //TODO: must be called in added live processes
+  
     public void setProcessesList(List<Process> processesList) {
         this.processesList = processesList;
     }

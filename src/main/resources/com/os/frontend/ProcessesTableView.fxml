@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="tableContainerCss" prefHeight="422.0" prefWidth="623.0" stylesheets="@../../../stylesheets/ProcessTableView.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.frontend.scheduling_window.observers.ProcessesTable">
+<VBox fx:id="tableContainerCss" prefHeight="422.0" prefWidth="623.0" stylesheets="@../../../stylesheets/ProcessTableView.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.frontend.scheduling_window.observers.ProcessesTable">
     <padding>
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
     </padding>
@@ -57,12 +57,12 @@
                   <stops>
                      <Stop>
                         <color>
-                           <Color red="0.6784313917160034" green="0.8470588326454163" blue="0.9019607901573181" />
+                           <Color blue="0.9019607901573181" green="0.8470588326454163" red="0.6784313917160034" />
                         </color>
                      </Stop>
                      <Stop offset="1.0">
                         <color>
-                           <Color red="1.0" green="1.0" blue="1.0" />
+                           <Color blue="1.0" green="1.0" red="1.0" />
                         </color>
                      </Stop>
                   </stops>
@@ -74,7 +74,7 @@
                 </font>
             </Label>
         </HBox>
-        <Label text="Process State Key">
+        <Label text="Estado del proceso">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font>

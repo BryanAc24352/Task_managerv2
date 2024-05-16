@@ -12,20 +12,20 @@ public class SJF_Pree extends SchedulingAlgo {
     private List<Process> clonedProcesses;
 
     public static void main(String[] args) {
-        // Create some sample processes
+       
         Process p1 = new Process(1, 0, 5);
         Process p2 = new Process(2, 1, 3);
         Process p3 = new Process(3, 2, 2);
         Process p4 = new Process(4, 3, 5);
 
-        // Add the processes to the SJF preemptive scheduling algorithm
+        
         SJF_Pree sjfPree = new SJF_Pree();
         sjfPree.addNewProcesses(List.of(p1, p2, p3, p4));
 
-        // Execute the SJF preemptive scheduling algorithm
+        
         ProcessTable processTable = sjfPree.execute();
 
-        // Output the execution events
+       
         for (ProcessExecutionEvent event : processTable.getExecutionEvents()) {
             System.out.println(event);
         }
@@ -40,35 +40,34 @@ public class SJF_Pree extends SchedulingAlgo {
         PriorityQueue<Process> readyQueue = new PriorityQueue<>(Comparator.comparingInt(Process::getRemainingTime).thenComparing(Process::getArrivalTime));
         int currentTime = 0;
 
-        while (!clonedProcesses.isEmpty()) { // Continue until all processes are executed
-            // Get the processes that have arrived by the current time
+        while (!clonedProcesses.isEmpty()) { 
             List<Process> arrivedProcesses = getArrivedProcesses(currentTime);
 
             if (arrivedProcesses.isEmpty()) {
-                // If no processes have arrived, increment current time
+                
                 currentTime++;
                 continue;
             }
 
-            // Add the arrived processes to the ready queue
+            
             for (Process arrivedProcess : arrivedProcesses) {
                 if (!readyQueue.contains(arrivedProcess)) {
                     readyQueue.add(arrivedProcess);
                 }
             }
 
-            // Get the process with the shortest burst time
+           
             Process runningProcess = readyQueue.poll();
 
 
-            // Ensure that a process is available for execution
+            
             assert runningProcess != null;
             runningProcess.decrementRemainingTime();
 
-            // Add event for process arrival
+           
             processTable.addExecutionEvent(runningProcess, currentTime, runningProcess.getProcessNumber(), ProcessState.ARRIVED);
 
-            // Add event for process start
+            
             processTable.addExecutionEvent(runningProcess, currentTime, runningProcess.getProcessNumber(), ProcessState.STARTED);
 
 
@@ -80,7 +79,7 @@ public class SJF_Pree extends SchedulingAlgo {
                 arrivedProcesses.clear();
                 arrivedProcesses.addAll(getArrivedProcesses(++currentTime));
 
-                // Add only the new arrived processes to the ready queue
+                
                 for (Process arrivedProcess : arrivedProcesses) {
                     if (!readyQueue.contains(arrivedProcess)) {
                         readyQueue.add(arrivedProcess);
@@ -90,7 +89,7 @@ public class SJF_Pree extends SchedulingAlgo {
                 if (!readyQueue.isEmpty()) {
                     Process nextProcess = readyQueue.peek();
                     if (nextProcess != null && nextProcess != runningProcess) {
-                        // Process is interrupted
+                       
                         processTable.addExecutionEvent(runningProcess, currentTime, runningProcess.getProcessNumber(), ProcessState.INTERRUPTED);
                         assert readyQueue.peek() != null;
                         runningProcess = readyQueue.poll();
@@ -99,7 +98,7 @@ public class SJF_Pree extends SchedulingAlgo {
                         processTable.addExecutionEvent(runningProcess, currentTime, runningProcess.getProcessNumber(), ProcessState.ARRIVED);
                         processTable.addExecutionEvent(runningProcess, currentTime, runningProcess.getProcessNumber(), ProcessState.STARTED);
                     } else {
-                        // Process continues running
+                       
                         processTable.addExecutionEvent(runningProcess, currentTime, runningProcess.getProcessNumber(), ProcessState.RUNNING);
                         runningProcess.decrementRemainingTime();
                     }
@@ -108,9 +107,9 @@ public class SJF_Pree extends SchedulingAlgo {
 
             processTable.addExecutionEvent(runningProcess, currentTime, runningProcess.getProcessNumber(), ProcessState.COMPLETED);
 
-            // Remove the executed process from ready queue
+         
             readyQueue.remove(runningProcess);
-            // Remove the executed process from the list
+            
             clonedProcesses.remove(runningProcess);
             currentTime++;
         }
@@ -134,7 +133,7 @@ public class SJF_Pree extends SchedulingAlgo {
         cloneProcessList();
     }
 
-    // Helper methods
+
     private void cloneProcessList() {
         this.clonedProcesses = processesList.stream()
                 .map(Process::clone)

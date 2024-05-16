@@ -37,25 +37,25 @@ public class Barchart implements Initializable {
         xAxis.setLabel("Procesos");
         yAxis.setLabel("Tiempo de Rafaga");
 
-        // Create a list to store the categories
+     
         ObservableList<String> categories = FXCollections.observableArrayList();
 
-        // Add category names for each process in the list
+        
         for (Process process : processList) {
             categories.add("P" + (processList.indexOf(process) + 1));
         }
 
-        // Set the categories on the X-axis
+        
         xAxis.setCategories(categories);
 
-        // Create a series for each process and add it to the chart
+        
         for (Process process : processList) {
             int seriesIndex = processList.indexOf(process);
             XYChart.Series<String, Integer> series = new XYChart.Series<>();
-            series.setName("P" + (seriesIndex + 1)); // Set a unique name for each series
+            series.setName("P" + (seriesIndex + 1)); 
             series.getData().add(new XYChart.Data<>(series.getName(), process.getBurstTime()));
 
-            //set Fill Color for series
+            
             setBarColorForSeries (series,  seriesIndex);
 
 
@@ -67,7 +67,7 @@ public class Barchart implements Initializable {
 
     private void setBarColorForSeries(XYChart.Series<String, Integer> series , int seriesIndex ){
 
-// Set the fill color of the series based on its index
+
         String colorStyle = Colors.getColor(seriesIndex);
         series.getData().forEach(data -> {
             data.nodeProperty().addListener((observable, oldValue, newNode) -> {
@@ -102,15 +102,9 @@ public class Barchart implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initializeChart();
-        // Load the CSS file
-        // Adjust the layout of the category axis to center the bars
-        //xAxis.setAnimated(false); // Disable animation to ensure immediate effect
-        //xAxis.setAutoRanging(false); // Disable auto-ranging to set fixed categories
-        //xAxis.setTickMarkVisible(false); // Hide tick marks to prevent overlap
-        //xAxis.setTickLabelGap(0); // Set gap between tick labels to 0
-        //xAxis.setTickLabelRotation(0); // Set tick label rotation to 0
-        xAxis.setStyle("-fx-padding: 0;"); // Remove any additional padding
-        xAxis.setCenterShape(false); // Center the axis labels
+
+        xAxis.setStyle("-fx-padding: 0;"); 
+        xAxis.setCenterShape(false); 
 
     }
 }

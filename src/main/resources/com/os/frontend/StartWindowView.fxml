@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="638.0" prefWidth="1150.0" stylesheets="@StartWindowView.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.frontend.start_window.StartWindowController">
+<VBox prefHeight="638.0" prefWidth="1150.0" stylesheets="@StartWindowView.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.frontend.start_window.StartWindowController">
    <StackPane prefHeight="176.0" prefWidth="1217.0">
       <Label fx:id="CPUScheduler" text="CPU Task Manger" textFill="#d7d7d7">
          <font>
@@ -87,7 +87,7 @@
          </font></Button>
       <VBox fx:id="priorityBlock" alignment="TOP_CENTER" minHeight="-Infinity" prefHeight="100.0" prefWidth="100.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="114.0" text="Q" textAlignment="CENTER" textFill="#cdcdcd">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="114.0" text="Quatum:" textAlignment="CENTER" textFill="#cdcdcd">
                <font>
                   <Font size="18.0" />
                </font>

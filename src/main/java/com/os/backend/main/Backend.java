@@ -29,12 +29,11 @@ public class Backend {
 
     public void setAlgo(SchedulingAlgo scheduler){
         this.scheduler = scheduler;
-        //TODO
+        
     }
 
     public void startSchedule(){
-        //TODO: Start timer
-        // Create a timeline that triggers every second
+  
         timeline = new Timeline(
                 new KeyFrame(Duration.seconds(0),
                         event -> {
@@ -44,49 +43,21 @@ public class Backend {
                             time++;
                         }
                 ),
-                new KeyFrame(Duration.seconds(1)) // Trigger every second
+                new KeyFrame(Duration.seconds(1)) 
         );
-        timeline.setCycleCount(Animation.INDEFINITE); // Run indefinitely
-        // Start the timeline
+        timeline.setCycleCount(Animation.INDEFINITE); 
         timeline.play();
 
-//        Platform.runLater(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    do {
-//                        // fetch current running process
-//                        system.setCurrentRunningProcess(system.getCurrentProcess(Backend.this.getTable(), time));
-//                        system.setProcessesAtTime(system.getProcessesAtTime());
-//                        time++;
-//                        if(system.getCurrentRunningProcess() != null)system.notifyObservers();
-//                        Thread.sleep(1000);
-//                    }while(true);
-//                } catch (InterruptedException e) {
-//                    throw new RuntimeException(e);
-//                }
-//            }
-//        });
-//
 
-
-//        // Check for empty ProcessTable
-//        if( this.table.getExecutionEvents().isEmpty()) return;
-//
-//        // Start processing from time t=0
-//        // checking every 1 sec for running process
-//        Thread processing = new Thread(this.system);
-//        processing.start();
     }
 
     public void updateProcessesList(List<Process> newProcesses){
         this.processList = newProcesses;
-        //TODO
+        
         scheduler.addNewProcesses(this.processList);
         this.table = scheduler.execute();
     }
-
-    //For the observer
+    
     public void attach(Observer observer){
         system.attach(observer);
     }

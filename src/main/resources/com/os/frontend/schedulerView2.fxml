@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #212141;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.frontend.SchedulerViewController">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #212141;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.frontend.SchedulerViewController">
     <children>
         <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1024.0" text="Planificador" textFill="#dfc328" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
@@ -48,17 +48,17 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <TextField fx:id="priorityField" alignment="CENTER" layoutX="258.0" layoutY="499.0" prefHeight="26.0" prefWidth="81.0" promptText="Priority">
+        <TextField fx:id="priorityField" alignment="CENTER" layoutX="258.0" layoutY="499.0" prefHeight="26.0" prefWidth="81.0" promptText="Prioridad">
             <font>
                 <Font size="10.0" />
             </font>
         </TextField>
-        <TextField fx:id="burstField" alignment="CENTER" layoutX="165.0" layoutY="498.0" prefHeight="26.0" prefWidth="81.0" promptText="Burst length">
+        <TextField fx:id="burstField" alignment="CENTER" layoutX="165.0" layoutY="498.0" prefHeight="26.0" prefWidth="81.0" promptText="CPU">
             <font>
                 <Font size="10.0" />
             </font>
         </TextField>
-        <TextField fx:id="arrivalField" alignment="CENTER" layoutX="73.0" layoutY="499.0" prefHeight="26.0" prefWidth="81.0" promptText="Arrival  Time">
+        <TextField fx:id="arrivalField" alignment="CENTER" layoutX="73.0" layoutY="499.0" prefHeight="26.0" prefWidth="81.0" promptText="Llegada">
             <font>
                 <Font size="10.0" />
             </font>

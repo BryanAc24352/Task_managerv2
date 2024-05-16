@@ -17,18 +17,18 @@ public class ProcessAtTime {
     public void updateState(int time, ProcessTable table) {
         List<ProcessExecutionEvent> currentTable = table.getProcessesList(time);
 
-        // If the process is not in the table, then it is Pending
+        
         if (currentTable.stream().noneMatch(e -> e.getProcessNumber() == process.getProcessNumber())) {
             this.state = ProcessState.PENDING;
             return;
         }
 
-        //else then get the last state of the process
+        
         List<ProcessExecutionEvent> processEvents = currentTable.stream()
                 .filter(e -> e.getProcessNumber() == process.getProcessNumber())
                 .toList();
 
-        // set the last state of the process to the class's state
+        
         this.state = processEvents.get(processEvents.size() - 1).getState();
     }
 
