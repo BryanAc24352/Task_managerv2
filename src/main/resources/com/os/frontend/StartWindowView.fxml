@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="638.0" prefWidth="1150.0" stylesheets="@StartWindowView.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.frontend.start_window.StartWindowController">
+   <StackPane prefHeight="176.0" prefWidth="1217.0">
+      <Label fx:id="CPUScheduler" text="CPU Task Manger" textFill="#d7d7d7">
+         <font>
+            <Font name="Eras Medium ITC" size="86.0" />
+         </font>
+      </Label>
+   </StackPane>
+   <HBox fx:id="processListHBox" alignment="TOP_CENTER" spacing="30.0">
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="335.0" prefWidth="800.0" stylesheets="@StartWindowView.css">
+         <FlowPane fx:id="processesList" hgap="10.0" prefHeight="408.0" prefWidth="800.0" stylesheets="@StartWindowView.css" vgap="10.0">
+            <Button fx:id="plusButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#addNewProcess" prefHeight="120.0" prefWidth="245.0" text="+">
+               <font>
+                  <Font size="50.0" />
+               </font></Button>
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+         </FlowPane>
+      </ScrollPane>
+      <VBox alignment="TOP_CENTER" prefHeight="459.0" prefWidth="261.0" spacing="15.0">
+         <Label fx:id="schedulingAlgorithmsLabel" text="Algoritmo de planificacion" textFill="#cdcdcd">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
+         <ToggleButton fx:id="fcfsButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#hidePriorityOnProcesses" onMouseClicked="#hideQuantumSpinner" selected="true" text="FCFS" textAlignment="CENTER">
+            <toggleGroup>
+               <ToggleGroup fx:id="toggleGroup1" />
+            </toggleGroup>
+            <font>
+               <Font size="14.0" />
+            </font>
+         </ToggleButton>
+         <ToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#hidePriorityOnProcesses" onMouseClicked="#showQuantumSpinner" text="Round Robin" textAlignment="CENTER" toggleGroup="$toggleGroup1">
+            <font>
+               <Font size="14.0" />
+            </font></ToggleButton>
+         <ToggleButton layoutX="96.0" layoutY="167.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#hidePriorityOnProcesses" onMouseClicked="#hideQuantumSpinner" text="SJF Preemptivo" textAlignment="CENTER" toggleGroup="$toggleGroup1">
+            <font>
+               <Font size="14.0" />
+            </font></ToggleButton>
+         <ToggleButton layoutX="96.0" layoutY="192.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#hidePriorityOnProcesses" onMouseClicked="#hideQuantumSpinner" text="SJF No Preemptivo" textAlignment="CENTER" toggleGroup="$toggleGroup1">
+            <font>
+               <Font size="14.0" />
+            </font></ToggleButton>
+         <ToggleButton layoutX="96.0" layoutY="142.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showPriorityOnProcesses" onMouseClicked="#hideQuantumSpinner" text="Prioridad" textAlignment="CENTER" toggleGroup="$toggleGroup1">
+            <font>
+               <Font size="14.0" />
+            </font></ToggleButton>
+         <ToggleButton layoutX="96.0" layoutY="167.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showPriorityOnProcesses" onMouseClicked="#hideQuantumSpinner" text="Prioridad No Preemptivo" textAlignment="CENTER" toggleGroup="$toggleGroup1">
+            <font>
+               <Font size="14.0" />
+            </font></ToggleButton>
+         <ToggleButton layoutX="96.0" layoutY="167.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showPriorityOnProcesses" onMouseClicked="#hideQuantumSpinner" text="Planificacion_Sorteo" textAlignment="CENTER" toggleGroup="$toggleGroup1">
+            <font>
+               <Font size="14.0" />
+            </font></ToggleButton>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+   </HBox>
+   <HBox fx:id="controlButtons" alignment="CENTER" prefHeight="129.0" prefWidth="1070.0" spacing="30.0">
+      <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#createProcesses" prefHeight="60.0" prefWidth="140.0" styleClass="button-class" text="Confirmar">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <Button mnemonicParsing="false" onMouseClicked="#resetProcessList" prefHeight="60.0" prefWidth="140.0" styleClass="button-class" text="Reiniciar">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <VBox fx:id="priorityBlock" alignment="TOP_CENTER" minHeight="-Infinity" prefHeight="100.0" prefWidth="100.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="114.0" text="Q" textAlignment="CENTER" textFill="#cdcdcd">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Spinner fx:id="timeQuantumSpinner" prefHeight="25.0" prefWidth="104.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="6.0" />
+               </VBox.margin>
+            </Spinner>
+         </children>
+      </VBox>
+   </HBox>
+</VBox>

@@ -1,0 +1,250 @@
+/*main color -> #222831*/
+/* secondary color -> #31363F*/
+/* 2l lon 2l metarshm -> #76ABAE*/
+/* bright color -> #EEEEEE*/
+.root {
+    -fx-background-color: #1C1C1C;
+}
+
+#processesList {
+    -fx-background-color: black;
+
+}
+
+#processesList .process-container {
+    /* Add your styling for the HBox container here */
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color */
+    -fx-border-width: 2px; /* Border width */
+    -fx-background-radius: 10px; /* Border radius */
+    -fx-border-radius: 10px; /* Border radius */
+}
+
+#processesList .remove-button {
+    /* Add your styling for the remove button here */
+    -fx-background-color: #E74C3C; /* Red color */
+    -fx-text-fill: #EEE;
+
+    /*    -fx-background-radius: 10px; *//* Border radius */
+    -fx-background-radius: 0 10 10 0;
+    /*    -fx-background-insets: 0 10 0 0;*/
+}
+
+#processesList .remove-button:hover {
+    /* Add your styling for the remove button here */
+    -fx-background-color: #C0392B; /* Darker shade of red on hover */
+    -fx-text-fill: #EEE;
+}
+
+/* ToggleButtonStyle.css */
+.toggle-button {
+    -fx-background-color: #EEEEEE; /* Default background color */
+    -fx-text-fill: #31363F; /* Default text color */
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 5px 10px; /* Padding */
+    -fx-background-radius: 15px; /* Border radius */
+}
+
+.toggle-button:selected {
+    -fx-background-color: #76ABAE; /* Background color when selected */
+    -fx-text-fill: #EEEEEE; /* Text color when selected */
+}
+
+.toggle-button:hover {
+    -fx-background-color: #5B8694; /* Background color when hovered */
+    -fx-text-fill: #EEEEEE; /* Text color when selected */
+}
+
+/************************ Style control Buttons ***********************************/
+/* ButtonStyle.css */
+.button-class {
+    -fx-background-color: #31363F; /* Secondary color */
+    -fx-text-fill: #EEEEEE; /* Bright color for text */
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 10px 20px; /* Padding */
+    -fx-background-radius: 10px; /* Border radius */
+    -fx-border-radius: 10px; /* Border radius */
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color */
+    -fx-border-width: 2px; /* Border width */
+}
+
+.button-class:hover {
+    -fx-background-color: #222831; /* Main color on hover */
+    -fx-border-color: #5B8694; /* 2l lon 2l metarshm color on hover */
+}
+
+.button-class:pressed {
+    -fx-background-color: #222831; /* Main color when pressed */
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color when pressed */
+}
+
+/* Change Confirm Button style suggestion */
+#confirmButton {
+    /* -fx-background-color: #aaa; */ /* Secondary color */
+    /*    -fx-text-fill: #222831; *//* Bright color for text */
+}
+
+
+#processesList .child {
+    -fx-background-color: #31363F; /* Secondary color */
+    -fx-text-fill: #EEEEEE; /* Bright color for text */
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 10px 20px; /* Padding */
+    -fx-background-radius: 10px; /* Border radius */
+    -fx-border-radius: 10px; /* Border radius */
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color */
+    -fx-border-width: 2px; /* Border width */
+}
+
+#processesList .child:hover {
+    -fx-background-color: #222831; /* Main color on hover */
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color on hover */
+}
+
+#processesList .child:pressed {
+    -fx-background-color: #222831; /* Main color when pressed */
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color when pressed */
+}
+
+#plusButton {
+    -fx-background-color: #EEEEEE;
+}
+
+/* ButtonStyle.css */
+#plusButton {
+    -fx-background-color: #31363F; /* Secondary color */
+    -fx-text-fill: #EEEEEE; /* Bright color for text */
+    -fx-font-size: 25px; /* Font size */
+    -fx-padding: 10px 20px; /* Padding */
+    -fx-background-radius: 10px; /* Border radius */
+    -fx-border-radius: 10px; /* Border radius */
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color */
+    -fx-border-width: 2px; /* Border width */
+
+}
+
+#plusButton:hover {
+    -fx-background-color: #76ABAE; /* Change background color on hover */
+    -fx-text-fill: #EEEEEE; /* Bright color for text */
+    -fx-border-color: #EEEEEE; /* 2l lon 2l metarshm color */
+}
+
+
+/* FlowPaneStyle.css */
+#processesList {
+    -fx-background-color: #222831; /* Main color */
+    -fx-background-radius: 10px;
+    -fx-padding: 10px; /* Padding */
+    /*-fx-border-color: #76ABAE; !* Border color *!*/
+    -fx-border-color: transparent;
+    -fx-border-width: 3px; /* Border width */
+    -fx-border-radius: 10px; /* Border radius */
+}
+
+/* PaneStyle.css */
+#processListHBox {
+    -fx-border-width: 0; /* Cancel border */
+}
+
+#scrollPane {
+    -fx-border-width: 0; /* Cancel border */
+}
+
+
+/* StartWindowView.css */
+#controlButtons {
+    -fx-spacing: 10px; /* Margin between children */
+}
+
+/* StartWindowView.css */
+#processesListScrollPane {
+    -fx-background-color: #222831; /* Main color */
+}
+
+
+/****************************/
+/* SpinnerStyle.css */
+#timeQuantumSpinner {
+    -fx-background-color: #f0f0f0; /* Background color */
+    -fx-text-fill: #333333; /* Text color */
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 2.5px 5px; /* Padding */
+    -fx-background-radius: 5px; /* Border radius */
+    -fx-border-radius: 5px; /* Border radius */
+    -fx-border-color: #cccccc; /* Border color */
+    -fx-border-width: 1px; /* Border width */
+}
+
+#timeQuantumSpinner:hover {
+    -fx-background-color: #e0e0e0; /* Background color on hover */
+}
+
+#timeQuantumSpinner:focused {
+    -fx-border-color: #007bff; /* Border color when focused */
+}
+
+/*----------------------------------------------------------------
+ * Scroll pane styling
+ */
+.scroll-pane {
+    -fx-background-color: #76ABAE;
+    -fx-background-radius: 10px;
+    -fx-padding: 2px;
+    -fx-border-radius: 10px; /* Border radius */
+    -fx-border-color: transparent; /* 2l lon 2l metarshm color */
+    -fx-border-width: 2px; /* Border width */
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #76ABAE; /* Match ScrollPane background color */
+    -fx-background-radius: 10px; /* Match ScrollPane border radius */
+}
+
+/* Thumb */
+/* Set the thumb's color and size */
+.scroll-pane .scroll-bar:vertical *.thumb,
+.scroll-pane .scroll-bar:horizontal *.thumb {
+    -fx-background-color: linear-gradient(to bottom, #222831, #557d7e, #76abae); /* Customize thumb color */
+    -fx-background-radius: 20px; /* Customize thumb radius */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0); /* Add a drop shadow */
+}
+
+/* Set the thumb's hover color */
+.scroll-pane .scroll-bar:vertical *.thumb:hover,
+.scroll-pane .scroll-bar:horizontal *.thumb:hover {
+    -fx-background-color: #222831; /* Customize thumb hover color */
+}
+
+/* Set the thumb's presser color */
+.scroll-pane .scroll-bar:vertical *.thumb:pressed,
+.scroll-pane .scroll-bar:horizontal *.thumb:pressed {
+    -fx-background-color: #222831; /* Customize thumb hover color */
+}
+
+/* tracks */
+/* Hide the arrows and the track background */
+.scroll-pane .scroll-bar:vertical,
+.scroll-pane .scroll-bar:horizontal {
+    -fx-padding: 0; /* Remove padding */
+    -fx-background-color: transparent;
+    -fx-pref-height: 2px; /* Set the preferred height */
+}
+
+.scroll-pane .scroll-bar:vertical *.increment-arrow,
+.scroll-pane .scroll-bar:vertical *.decrement-arrow,
+.scroll-pane .scroll-bar:horizontal *.increment-arrow,
+.scroll-pane .scroll-bar:horizontal *.decrement-arrow,
+.scroll-pane .scroll-bar:horizontal *.increment-arrow:hover,
+.scroll-pane .scroll-bar:horizontal *.decrement-arrow:hover,
+.scroll-pane .scroll-bar:horizontal *.increment-arrow:pressed,
+.scroll-pane .scroll-bar:horizontal *.decrement-arrow:pressed,
+.scroll-pane .scroll-bar:vertical .track,
+.scroll-pane .scroll-bar:horizontal .track {
+    -fx-background-color: transparent; /* Hide arrows and track */
+    -fx-border-color: transparent;
+}
+
+
+.scroll-pane.scroll-bar{
+    -fx-background-color: transparent; /* Hide arrows and track */
+    -fx-border-color: transparent;
+}

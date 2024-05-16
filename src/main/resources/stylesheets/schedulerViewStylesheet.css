@@ -1,0 +1,511 @@
+/* chart_styles.css */
+.table-column .table-cell  {
+    -fx-alignment: CENTER;
+}
+
+/* Series 1 (index 0) - Red */
+.chart-bar.series0{
+    -fx-bar-fill: red;
+}
+
+/* Series 2 (index 1) - Green */
+.chart-bar.series1{
+    -fx-bar-fill: orange;
+}
+
+/* Series 3 (index 2) - Blue */
+.chart-bar.series2{
+    -fx-bar-fill: LIGHTBLUE;
+}
+/*
+chart-line-symbol.series0
+    -fx-bar-fill: blue;
+
+}*/
+/* Series 1 (index 0) - Red */
+
+
+/* Series 4 (index 3) - Yellow */
+.chart-bar.series3{
+    -fx-bar-fill: yellow;
+}
+
+/* Series 5 (index 4) - Orange */
+.chart-bar.series4{
+    -fx-bar-fill: #daa695;
+}
+
+/* Series 6 (index 5) - Purple */
+.chart-bar.series5{
+    -fx-bar-fill: purple;
+}
+
+/* Series 7 (index 6) - Cyan */
+.chart-bar.series6{
+    -fx-bar-fill: cyan;
+}
+
+/* Series 8 (index 7) - Magenta */
+.chart-bar.series7{
+    -fx-bar-fill: magenta;
+}
+
+/* Series 9 (index 8) - Pink */
+.chart-bar.series8{
+    -fx-bar-fill: pink;
+}
+
+/* Series 10 (index 9) - Lime */
+.chart-bar.series9{
+    -fx-bar-fill: lime;
+}
+
+/* Series 11 (index 10) - Brown */
+.chart-bar.series10 {
+    -fx-bar-fill: brown;
+}
+
+/* Series 12 (index 11) - Gray */
+.chart-bar.series11 {
+    -fx-bar-fill: grey;
+}
+
+/* Series 13 (index 12) - Blue */
+.chart-bar.series12 {
+    -fx-bar-fill: blue;
+}
+
+/* Series 14 (index 13) - Light Green */
+.chart-bar.series13 {
+    -fx-bar-fill: lightgreen;
+}
+
+/* Series 15 (index 14) - Light Pink */
+.chart-bar.series14 {
+    -fx-bar-fill: lightpink;
+}
+
+/* Series 16 (index 15) - Light Gray */
+.chart-bar.series15 {
+    -fx-bar-fill: lightgray;
+}
+
+/* Series 17 (index 16) - Dark Red */
+.chart-bar.series16 {
+    -fx-bar-fill: darkred;
+}
+
+/* Series 18 (index 17) - Dark Green */
+.chart-bar.series17 {
+    -fx-bar-fill: darkgreen;
+}
+
+/* Series 19 (index 18) - Dark Blue */
+.chart-bar.series18 {
+    -fx-bar-fill: darkblue;
+}
+
+/* Series 20 (index 19) - Dark Orange */
+.chart-bar.series19 {
+    -fx-bar-fill: darkorange;
+}
+
+/* Series 21 (index 20) - Aqua */
+.chart-bar.series20 {
+    -fx-bar-fill: aqua;
+}
+
+/* Series 22 (index 21) - Black */
+.chart-bar.series21 {
+    -fx-bar-fill: black;
+}
+
+/* Series 23 (index 22) - White */
+.chart-bar.series22 {
+    -fx-bar-fill: white;
+}
+
+/* Series 24 (index 23) - Silver */
+.chart-bar.series23 {
+    -fx-bar-fill: silver;
+}
+
+/* Series 25 (index 24) - Gold */
+.chart-bar.series24 {
+    -fx-bar-fill: gold;
+}
+
+/* Series 26 (index 25) - Indigo */
+.chart-bar.series25 {
+    -fx-bar-fill: indigo;
+}
+
+/* Series 27 (index 26) - Teal */
+.chart-bar.series26 {
+    -fx-bar-fill: teal;
+}
+
+/* Series 28 (index 27) - Violet */
+.chart-bar.series27 {
+    -fx-bar-fill: violet;
+}
+
+/* Series 29 (index 28) - Yellow Green */
+.chart-bar.series28 {
+    -fx-bar-fill: yellowgreen;
+}
+
+/* Series 30 (index 29) - Crimson */
+.chart-bar.series29 {
+    -fx-bar-fill: crimson;
+}
+
+/* Series 31 (index 30) - Lavender */
+.chart-bar.series30 {
+    -fx-bar-fill: lavender;
+}
+
+/* Series 32 (index 31) - Salmon */
+.chart-bar.series31 {
+    -fx-bar-fill: salmon;
+}
+
+/* Series 33 (index 32) - Chocolate */
+.chart-bar.series32 {
+    -fx-bar-fill: chocolate;
+}
+
+/* Series 34 (index 33) - Turquoise */
+.chart-bar.series33 {
+    -fx-bar-fill: turquoise;
+}
+
+/* Series 35 (index 34) - Coral */
+.chart-bar.series34 {
+    -fx-bar-fill: coral;
+}
+
+/* Series 36 (index 35) - Light Coral */
+.chart-bar.series35 {
+    -fx-bar-fill: lightcoral;
+}
+
+/* Series 37 (index 36) - Dark Cyan */
+.chart-bar.series36 {
+    -fx-bar-fill: darkcyan;
+}
+
+/* Series 38 (index 37) - Light Cyan */
+.chart-bar.series37 {
+    -fx-bar-fill: lightcyan;
+}
+
+/* Series 39 (index 38) - Dark Violet */
+.chart-bar.series38 {
+    -fx-bar-fill: darkviolet;
+}
+
+/* Series 40 (index 39) - Medium Violet Red */
+.chart-bar.series39 {
+    -fx-bar-fill: mediumvioletred;
+}
+
+/* Series 41 (index 40) - Light Salmon */
+.chart-bar.series40 {
+    -fx-bar-fill: lightsalmon;
+}
+
+/* Series 42 (index 41) - Light Steel Blue */
+.chart-bar.series41 {
+    -fx-bar-fill: lightsteelblue;
+}
+
+/* Series 43 (index 42) - Dark Goldenrod */
+.chart-bar.series42 {
+    -fx-bar-fill: darkgoldenrod;
+}
+
+/* Series 44 (index 43) - Dark Khaki */
+.chart-bar.series43 {
+    -fx-bar-fill: darkkhaki;
+}
+
+/* Series 45 (index 44) - Light Sea Green */
+.chart-bar.series44 {
+    -fx-bar-fill: lightseagreen;
+}
+
+/* Series 46 (index 45) - Dark Slate Gray */
+.chart-bar.series45 {
+    -fx-bar-fill: darkslategray;
+}
+
+/* Series 47 (index 46) - Deep Pink */
+.chart-bar.series46 {
+    -fx-bar-fill: deeppink;
+}
+
+/* Series 48 (index 47) - Forest Green */
+.chart-bar.series47 {
+    -fx-bar-fill: forestgreen;
+}
+
+/* Series 49 (index 48) - Hot Pink */
+.chart-bar.series48 {
+    -fx-bar-fill: hotpink;
+}
+
+/* Series 50 (index 49) - Medium Blue */
+.chart-bar.series49 {
+    -fx-bar-fill: mediumblue;
+}
+
+/* Series 51 (index 50) - Olive */
+.chart-bar.series50 {
+    -fx-bar-fill: olive;
+}
+
+/* Series 52 (index 51) - Plum */
+.chart-bar.series51 {
+    -fx-bar-fill: plum;
+}
+
+/* Series 53 (index 52) - Royal Blue */
+.chart-bar.series52 {
+    -fx-bar-fill: royalblue;
+}
+
+/* Series 54 (index 53) - Sienna */
+.chart-bar.series53 {
+    -fx-bar-fill: sienna;
+}
+
+/* Series 55 (index 54) - Slate Gray */
+.chart-bar.series54 {
+    -fx-bar-fill: slategray;
+}
+
+/* Series 56 (index 55) - Tomato */
+.chart-bar.series55 {
+    -fx-bar-fill: tomato;
+}
+
+/* Series 57 (index 56) - Wheat */
+.chart-bar.series56 {
+    -fx-bar-fill: wheat;
+}
+
+/* Series 58 (index 57) - Dark Olive Green */
+.chart-bar.series57 {
+    -fx-bar-fill: darkolivegreen;
+}
+
+/* Series 59 (index 58) - Dark Orchid */
+.chart-bar.series58 {
+    -fx-bar-fill: darkorchid;
+}
+
+/* Series 60 (index 59) - Dark Slate Blue */
+.chart-bar.series59 {
+    -fx-bar-fill: darkslateblue;
+}
+
+/* Series 61 (index 60) - Dim Gray */
+.chart-bar.series60 {
+    -fx-bar-fill: dimgray;
+}
+
+/* Series 62 (index 61) - Light Goldenrod Yellow */
+.chart-bar.series61 {
+    -fx-bar-fill: lightgoldenrodyellow;
+}
+
+/* Series 63 (index 62) - Light Slate Gray */
+.chart-bar.series62 {
+    -fx-bar-fill: lightslategray;
+}
+
+/* Series 64 (index 63) - Medium Aquamarine */
+.chart-bar.series63 {
+    -fx-bar-fill: mediumaquamarine;
+}
+
+/* Series 65 (index 64) - Medium Sea Green */
+.chart-bar.series64 {
+    -fx-bar-fill: mediumseagreen;
+}
+
+/* Series 66 (index 65) - Medium Slate Blue */
+.chart-bar.series65 {
+    -fx-bar-fill: mediumslateblue;
+}
+
+/* Series 67 (index 66) - Medium Spring Green */
+.chart-bar.series66 {
+    -fx-bar-fill: mediumspringgreen;
+}
+
+/* Series 68 (index 67) - Medium Turquoise */
+.chart-bar.series67 {
+    -fx-bar-fill: mediumturquoise;
+}
+
+/* Series 69 (index 68) - Medium Violet Red */
+.chart-bar.series68 {
+    -fx-bar-fill: mediumvioletred;
+}
+
+/* Series 70 (index 69) - Midnight Blue */
+.chart-bar.series69 {
+    -fx-bar-fill: midnightblue;
+}
+
+/* Series 71 (index 70) - Olive Drab */
+.chart-bar.series70 {
+    -fx-bar-fill: olivedrab;
+}
+
+/* Series 72 (index 71) - Orange Red */
+.chart-bar.series71 {
+    -fx-bar-fill: orangered;
+}
+
+/* Series 73 (index 72) - Orchid */
+.chart-bar.series72 {
+    -fx-bar-fill: orchid;
+}
+
+/* Series 74 (index 73) - Pale Goldenrod */
+.chart-bar.series73 {
+    -fx-bar-fill: palegoldenrod;
+}
+
+/* Series 75 (index 74) - Pale Green */
+.chart-bar.series74 {
+    -fx-bar-fill: palegreen;
+}
+
+/* Series 76 (index 75) - Pale Turquoise */
+.chart-bar.series75 {
+    -fx-bar-fill: paleturquoise;
+}
+
+/* Series 77 (index 76) - Pale Violet Red */
+.chart-bar.series76 {
+    -fx-bar-fill: palevioletred;
+}
+
+/* Series 78 (index 77) - Papaya Whip */
+.chart-bar.series77 {
+    -fx-bar-fill: papayawhip;
+}
+
+/* Series 79 (index 78) - Peach Puff */
+.chart-bar.series78 {
+    -fx-bar-fill: peachpuff;
+}
+
+/* Series 80 (index 79) - Peru */
+.chart-bar.series79 {
+    -fx-bar-fill: peru;
+}
+
+/* Series 81 (index 80) - Powder Blue */
+.chart-bar.series80 {
+    -fx-bar-fill: powderblue;
+}
+
+/* Series 82 (index 81) - Rosy Brown */
+.chart-bar.series81 {
+    -fx-bar-fill: rosybrown;
+}
+
+/* Series 83 (index 82) - Saddle Brown */
+.chart-bar.series82 {
+    -fx-bar-fill: saddlebrown;
+}
+
+/* Series 84 (index 83) - Sandy Brown */
+.chart-bar.series83 {
+    -fx-bar-fill: sandybrown;
+}
+
+/* Series 85 (index 84) - Sea Green */
+.chart-bar.series84 {
+    -fx-bar-fill: seagreen;
+}
+
+/* Series 86 (index 85) - Sea Shell */
+.chart-bar.series85 {
+    -fx-bar-fill: seashell;
+}
+
+/* Series 87 (index 86) - Sky Blue */
+.chart-bar.series86 {
+    -fx-bar-fill: skyblue;
+}
+
+/* Series 88 (index 87) - Slate Blue */
+.chart-bar.series87 {
+    -fx-bar-fill: slateblue;
+}
+
+/* Series 89 (index 88) - Snow */
+.chart-bar.series88 {
+    -fx-bar-fill: snow;
+}
+
+/* Series 90 (index 89) - Spring Green */
+.chart-bar.series89 {
+    -fx-bar-fill: springgreen;
+}
+
+/* Series 91 (index 90) - Steel Blue */
+.chart-bar.series90 {
+    -fx-bar-fill: steelblue;
+}
+
+/* Series 92 (index 91) - Tan */
+.chart-bar.series91 {
+    -fx-bar-fill: tan;
+}
+
+/* Series 93 (index 92) - Thistle */
+.chart-bar.series92 {
+    -fx-bar-fill: thistle;
+}
+
+/* Series 94 (index 93) - Tomato */
+.chart-bar.series93 {
+    -fx-bar-fill: tomato;
+}
+
+/* Series 95 (index 94) - Turquoise */
+.chart-bar.series94 {
+    -fx-bar-fill: turquoise;
+}
+
+/* Series 96 (index 95) - Violet */
+.chart-bar.series95 {
+    -fx-bar-fill: violet;
+}
+
+/* Series 97 (index 96) - Wheat */
+.chart-bar.series96 {
+    -fx-bar-fill: wheat;
+}
+
+/* Series 98 (index 97) - White Smoke */
+.chart-bar.series97 {
+    -fx-bar-fill: whitesmoke;
+}
+
+/* Series 99 (index 98) - Yellow Green */
+.chart-bar.series98 {
+    -fx-bar-fill: yellowgreen;
+}
+
+/* Series 100 (index 99) - Dark Gray */
+.chart-bar.series99 {
+    -fx-bar-fill: darkgray;
+}

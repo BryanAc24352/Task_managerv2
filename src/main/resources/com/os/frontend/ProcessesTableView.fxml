@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="tableContainerCss" prefHeight="422.0" prefWidth="623.0" stylesheets="@../../../stylesheets/ProcessTableView.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.frontend.scheduling_window.observers.ProcessesTable">
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+    <TableView fx:id="table" prefHeight="239.0" prefWidth="589.0" styleClass="table">
+      <columns>
+          <TableColumn fx:id="stateColumn" editable="false" prefWidth="46.0" text="Estado" />
+          <TableColumn fx:id="processColumn" editable="false" prefWidth="53.0" text="Proceso" />
+          <TableColumn fx:id="arrivalColumn" editable="false" text="Llegada" />
+          <TableColumn fx:id="burstColumn" editable="false" prefWidth="67.0" text="Rafaga" />
+          <TableColumn fx:id="remainingColumn" editable="false" prefWidth="102.0" text="T. Restante" />
+          <TableColumn fx:id="_TAColumn" editable="false" prefWidth="109.0" text="T. Respuesta" />
+          <TableColumn fx:id="waitingColumn" editable="false" prefWidth="87.0" text="T. Espera" />
+      </columns>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
+    </TableView>
+    <GridPane fx:id="gridPaneOfColors">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+        </VBox.margin>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="1">
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="21.0" stroke="BLACK" strokeType="INSIDE" width="23.0">
+            <fill>
+               <LinearGradient>
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.6784313917160034" green="0.8470588326454163" blue="0.9019607901573181" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Label text="Listo">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </HBox>
+        <Label text="Process State Key">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+        </Label>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="40.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="PEACHPUFF" height="21.0" stroke="BLACK" strokeType="INSIDE" width="23.0" />
+            <Label text="Iniciado">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="207.0" layoutY="40.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="21.0" stroke="BLACK" strokeType="INSIDE" width="23.0" />
+            <Label text="Interrumpido">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIME" height="21.0" stroke="BLACK" strokeType="INSIDE" width="23.0" />
+            <Label text="En Ejecucion">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="21.0" stroke="BLACK" strokeType="INSIDE" width="23.0" />
+            <Label text="Pendiente">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="2">
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="21.0" stroke="BLACK" strokeType="INSIDE" width="23.0" />
+            <Label text="Completado">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </HBox>
+    </GridPane>
+    <HBox fx:id="importantBox" alignment="CENTER" prefHeight="50.0" prefWidth="589.0" spacing="40.0">
+        <HBox alignment="CENTER" styleClass="importantBoxChild">
+            <Label text=" Tiempo Espera Promedio: " textFill="#76abae">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Label>
+            <Label fx:id="avgWaitingLabel" text="0" textFill="#76abae">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Label>
+        </HBox>
+        <HBox alignment="CENTER" styleClass="importantBoxChild">
+            <Label text="Tiempo Retorno Promedio: " textFill="#76abae">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Label>
+            <Label fx:id="avgTurnaroundLabel" text="0" textFill="#76abae">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Label>
+        </HBox>
+      <padding>
+         <Insets top="10.0" />
+      </padding>
+    </HBox>
+</VBox>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root style="-fx-background-color: #1C1C1C; -fx-border-color: white;" type="AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.frontend.start_window.ProcessBlockController">
+   <VBox>
+      <AnchorPane prefHeight="49.0" prefWidth="221.0" style="-fx-background-color: #1C1C1C;" stylesheets="@ProcessBlockView.css">
+         <Label fx:id="processBlock" alignment="TOP_CENTER" layoutX="2.0" layoutY="-1.0" prefHeight="61.0" prefWidth="219.0" text="Proceso" textFill="#2c2b2b">
+            <font>
+               <Font name="Eras Bold ITC" size="50.0" />
+            </font>
+         </Label>
+         <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="-4.0" prefHeight="40.0" prefWidth="55.0" text="P" textFill="#9a8d8d">
+            <font>
+               <Font name="Eras Bold ITC" size="52.0" />
+            </font>
+         </Label>
+         <Label fx:id="nameLabel" alignment="TOP_LEFT" layoutX="28.0" layoutY="24.0" prefHeight="40.0" prefWidth="55.0" text="1" textFill="#9a8d8d">
+            <font>
+               <Font name="Eras Bold ITC" size="36.0" />
+            </font>
+         </Label>
+      </AnchorPane>
+      <HBox fx:id="hBox" alignment="TOP_CENTER" fillHeight="false" prefHeight="53.0" prefWidth="221.0">
+         <VBox alignment="TOP_CENTER" prefHeight="43.0" prefWidth="59.0">
+            <Label alignment="CENTER" text="Llegada" textAlignment="CENTER" textFill="#9a8d8d">
+               <font>
+                  <Font name="Eras Medium ITC" size="15.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="arrivalSpinner" onMousePressed="#print" opacity="0.6" prefHeight="25.0" prefWidth="55.0" />
+         </VBox>
+         <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="43.0" prefWidth="58.0">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="47.0" text="Rafaga" textAlignment="CENTER" textFill="#9a8d8d">
+               <font>
+                  <Font name="Eras Medium ITC" size="15.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="burstSpinner" onMousePressed="#print" opacity="0.6" prefHeight="25.0" prefWidth="55.0" />
+         </VBox>
+         <VBox fx:id="priorityBlock" alignment="TOP_CENTER" fillWidth="false" prefHeight="43.0" prefWidth="63.0">
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="61.0" text="Prioridad" textAlignment="CENTER" textFill="#9a8d8d">
+               <font>
+                  <Font name="Eras Medium ITC" size="15.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="prioritySpinner" onMousePressed="#print" opacity="0.6" prefHeight="25.0" prefWidth="55.0" />
+         </VBox>
+      </HBox>
+   </VBox>
+</fx:root>

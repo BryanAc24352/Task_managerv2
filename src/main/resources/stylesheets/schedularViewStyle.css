@@ -1,0 +1,103 @@
+/* contains the second page style */
+
+/*Color Used : */
+/*main color -> #222831*/
+/* secondary color -> #31363F*/
+/* 2l lon 2l metarshm -> #76ABAE*/
+/* bright color -> #EEEEEE*/
+#SchedularContainer {
+    -fx-background-color: #1C1C1C;
+}
+#CPUScheduler {
+    -fx-text-fill: #76ABAE;  /*Bright color for text */
+}
+
+#schedulerType{
+    -fx-text-fill: #6c8085;  /*Bright color for text */
+}
+
+#TimeId ,#timeLabel{
+    -fx-text-fill: #76ABAE;  /*Bright color for text */
+}
+
+
+.button-class {
+    -fx-background-color: #31363F; /* Secondary color */
+    -fx-text-fill: #EEEEEE; /* Bright color for text */
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 10px 20px; /* Padding */
+    -fx-background-radius: 10px; /* Border radius */
+    -fx-border-radius: 10px; /* Border radius */
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color */
+    -fx-border-width: 2px; /* Border width */
+    -fx-min-width: 25px; /* Minimum width */
+}
+
+.button-class:hover {
+    -fx-background-color: #222831; /* Main color on hover */
+    -fx-border-color: #5B8694; /* 2l lon 2l metarshm color on hover */
+}
+
+.button-class:pressed {
+    -fx-background-color: #222831; /* Main color when pressed */
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color when pressed */
+}
+
+#addButton {
+    -fx-padding: 10px 22px; /* Padding */
+}
+
+#processTable{
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color */
+    -fx-border-width: 2px; /* Border width */
+}
+
+
+/* ButtonStyle.css */
+.button-class {
+    -fx-background-color: #31363F; /* Secondary color */
+    -fx-text-fill: #EEEEEE; /* Bright color for text */
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 10px 20px; /* Padding */
+    -fx-background-radius: 10px; /* Border radius */
+    -fx-border-radius: 10px; /* Border radius */
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color */
+    -fx-border-width: 2px; /* Border width */
+}
+
+.button-class:hover {
+    -fx-background-color: #222831; /* Main color on hover */
+    -fx-border-color: #5B8694; /* 2l lon 2l metarshm color on hover */
+}
+
+.button-class:pressed {
+    -fx-background-color: #222831; /* Main color when pressed */
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color when pressed */
+}
+
+#ganttChartBox > * {
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color */
+    -fx-border-width: 2px; /* Border width */
+    -fx-background-color: #222831; /* Main color when pressed */
+}
+
+.restart-button{
+    -fx-background-color: #480707; /* Secondary color */
+    -fx-text-fill: #c7c7c7; /* Bright color for text */
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 10px 20px; /* Padding */
+    -fx-background-radius: 10px; /* Border radius */
+    -fx-border-radius: 10px; /* Border radius */
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color */
+    -fx-border-width: 2px; /* Border width */
+}
+
+.restart-button:hover {
+    -fx-background-color: #140202; /* Main color on hover */
+    -fx-border-color: #5B8694; /* 2l lon 2l metarshm color on hover */
+}
+
+.restart-button:pressed {
+    -fx-background-color: #000000; /* Main color when pressed */
+    -fx-border-color: #76ABAE; /* 2l lon 2l metarshm color when pressed */
+}

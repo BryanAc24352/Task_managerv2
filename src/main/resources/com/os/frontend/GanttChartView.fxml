@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+
+<ScrollPane fx:id="scrollPane" hbarPolicy="ALWAYS" maxHeight="-Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75" prefViewportHeight="0.5" prefViewportWidth="0.8" prefWidth="1080" style="-fx-background-color: #252932;" stylesheets="@../../../stylesheets/GanttChartView.css" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.frontend.scheduling_window.observers.GanttChart">
+   <content>
+      <HBox fx:id="ganttBox" alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="58.0" prefWidth="1786.0" style="-fx-background-color: #252932; -fx-border-color: transparent;" />
+   </content>
+</ScrollPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="SchedularContainer" alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1300.0" stylesheets="@../../../stylesheets/schedularViewStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.frontend.scheduling_window.components.SchedulerWindow">
+   <Label fx:id="CPUScheduler" text="CPU Task Manager" textFill="#d7d7d7">
+      <font>
+         <Font name="Eras Medium ITC" size="48.0" />
+      </font>
+   </Label>
+   <Label fx:id="schedulerType" text="Label">
+      <font>
+         <Font name="Candara" size="31.0" />
+      </font>
+   </Label>
+   <HBox fx:id="ganttChartBox" alignment="TOP_CENTER" minHeight="10.0">
+      <padding>
+         <Insets bottom="50.0" top="10.0" />
+      </padding>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin></HBox>
+   <HBox fx:id="barAndTableBox" minHeight="10.0" spacing="10.0">
+      <padding>
+         <Insets bottom="10.0" left="60.0" right="10.0" top="30.0" />
+      </padding>
+      <VBox.margin>
+         <Insets bottom="20.0" top="20.0" />
+      </VBox.margin></HBox>
+   <HBox fx:id="addProcessBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <Label text="Agregar proceso en vivo :" textFill="#76abae">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Region prefHeight="200.0" prefWidth="20.0" />
+      <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="137.0" spacing="10.0" style="-fx-background-color: #31363f; -fx-border-radius: 0 10 10 0; -fx-background-radius: 0 10 10 0;">
+         <Button fx:id="addButton" mnemonicParsing="false" onAction="#addNewProcessToBackEnd" styleClass="button-class" text="Agregar">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#resetProcessBlock" prefHeight="44.0" prefWidth="99.0" styleClass="button-class" text="Reiniciar">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Button>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="timerBox" alignment="CENTER" prefHeight="100.0" prefWidth="174.0">
+         <Label fx:id="TimeId" text="TIEMPO">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+         </Label>
+         <Label fx:id="timeLabel" alignment="CENTER" contentDisplay="CENTER" text="00:00">
+            <font>
+               <Font size="19.0" />
+            </font>
+         </Label>
+      </VBox>
+      <ToggleButton fx:id="startStopButton" mnemonicParsing="false" onAction="#startStop" styleClass="button-class" text="Pausar" />
+      <Region prefHeight="100.0" prefWidth="20.0" />
+      <ToggleButton fx:id="startStopButton1" mnemonicParsing="false" onAction="#restartApp" styleClass="restart-button" text="Reiniciar App" />
+      <VBox.margin>
+         <Insets top="50.0" />
+      </VBox.margin>
+   </HBox>
+   <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+      <padding>
+         <Insets right="30.0" />
+      </padding>
+   </HBox>
+</VBox>

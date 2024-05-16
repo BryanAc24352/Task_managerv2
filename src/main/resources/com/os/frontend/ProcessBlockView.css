@@ -1,0 +1,27 @@
+/*main color -> #222831*/
+/* secondary color -> #31363F*/
+/* 2l lon 2l metarshm -> #76ABAE*/
+/* bright color -> #EEEEEE*/
+
+.root{
+    -fx-background-color: #1C1C1C;
+}
+.VBox{
+    /* Define the initial style without glowing effect */
+    -fx-background-color: #1C1C1C;
+
+}
+#nameLabel {
+    -fx-text-fill : #76ABAE;
+}
+#anchorPane {
+    -fx-background-color : #31363F;
+    -fx-background-radius: 10 0 0 0;
+}
+#pLabel {
+    -fx-text-fill : #76ABAE;
+}
+#hBox {
+    -fx-background-color : #31363F;
+    -fx-background-radius: 0 0 0 10;
+}

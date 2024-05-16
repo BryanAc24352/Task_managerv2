@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #212141;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.frontend.SchedulerViewController">
+    <children>
+        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1024.0" text="Planificador" textFill="#dfc328" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Arial Bold" size="28.0" />
+            </font>
+            <padding>
+                <Insets top="10.0" />
+            </padding>
+        </Label>
+        <TableView fx:id="processTable" layoutX="64.0" layoutY="127.0" prefHeight="307.0" prefWidth="366.0" style="-fx-background-color: #30305f;" stylesheets="@../../../stylesheets/schedulerViewStylesheet.css">
+            <columns>
+                <TableColumn fx:id="pidColumn" prefWidth="73.2" resizable="false" text="PID" />
+                <TableColumn fx:id="arrivalColumn" prefWidth="73.2" resizable="false" text="Llegada" />
+                <TableColumn fx:id="burstColumn" prefWidth="73.2" resizable="false" text="Rafaga" />
+                <TableColumn fx:id="priorityColumn" prefWidth="73.2" resizable="false" text="Prioridad" />
+                <TableColumn fx:id="remainingColumn" minWidth="0.0" prefWidth="69.0" resizable="false" text="T. Restante" />
+            </columns>
+        </TableView>
+        <Button fx:id="startButton" layoutX="567.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: #5ee060;" text="Iniciar" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="stopButton" layoutX="708.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: #e43f31;" text="Detener" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Button>
+        <Label layoutX="74.0" layoutY="463.0" text="Agregar Proceso" textFill="#dfc227">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="priorityField" alignment="CENTER" layoutX="258.0" layoutY="499.0" prefHeight="26.0" prefWidth="81.0" promptText="Priority">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="burstField" alignment="CENTER" layoutX="165.0" layoutY="498.0" prefHeight="26.0" prefWidth="81.0" promptText="Burst length">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="arrivalField" alignment="CENTER" layoutX="73.0" layoutY="499.0" prefHeight="26.0" prefWidth="81.0" promptText="Arrival  Time">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </TextField>
+        <Button fx:id="addButton" alignment="CENTER" layoutX="353.0" layoutY="496.0" mnemonicParsing="false" onAction="#addNewProcess" style="-fx-background-color: #2d9dff;" text="Add" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+        <ScrollPane fx:id="scrollPane" hbarPolicy="ALWAYS" hvalue="0.04" layoutX="59.0" layoutY="591.0" maxHeight="-Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefViewportHeight="0.5" prefViewportWidth="0.5" prefWidth="500.0" vbarPolicy="NEVER" vvalue="0.25" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+            <content>
+                <HBox fx:id="ganttBox" alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="1800.0" style="-fx-background-color: #30305f; -fx-border-color: #30305f;">
+                    <!-- Add StackPane elements dynamically -->
+                </HBox>
+            </content>
+        </ScrollPane>
+        <BarChart fx:id="barChart" layoutX="493.0" layoutY="186.0" prefHeight="266.0" prefWidth="366.0" style="-fx-background-color: #323264; -fx-color: #156578;" stylesheets="@../../../stylesheets/schedulerViewStylesheet.css" AnchorPane.leftAnchor="492.80000000000007" AnchorPane.rightAnchor="164.60000000000002">
+            <xAxis>
+                <CategoryAxis autoRanging="false" endMargin="0.5" label="Procesos" startMargin="1.0" tickLabelFill="#76abae" tickLabelGap="0.0" tickLength="5.0" fx:id="xAxis" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" label="Tiempo Restante" side="LEFT" tickLabelFill="#76abae" />
+            </yAxis>
+        </BarChart>
+        <HBox alignment="CENTER" layoutX="450.3999938964844" layoutY="498.0" pickOnBounds="false" prefHeight="30.0" prefWidth="1071.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Button fx:id="executeButton" mnemonicParsing="false" onAction="#executeTest" style="-fx-background-color: #f8bc00;" text="Richar Lopez">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
